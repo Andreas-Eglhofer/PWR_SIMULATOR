@@ -1,0 +1,239 @@
+.output-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.output-panel h3 {
+  color: #00d4ff;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.current-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.power-card {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.temp-card {
+  border-color: rgba(255, 71, 87, 0.3);
+}
+
+.reactivity-card {
+  border-color: rgba(255, 165, 2, 0.3);
+}
+
+.value-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.value-content {
+  flex: 1;
+}
+
+.value-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.value-number {
+  color: #00d4ff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.value-unit {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+.chart-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chart-container h4 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chart-wrapper {
+  height: 200px;
+  position: relative;
+}
+
+.data-analysis {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.data-analysis h4 {
+  color: #00d4ff;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.analysis-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  min-height: 60px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.analysis-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.analysis-value {
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+.chart-wrapper canvas {
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  .current-values {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .analysis-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .analysis-item {
+    font-size: 0.8rem;
+  }
+  
+  .analysis-label,
+  .analysis-value {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .current-values {
+    grid-template-columns: 1fr;
+  }
+  
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .output-panel {
+    gap: 16px;
+  }
+  
+  .chart-container,
+  .data-analysis {
+    padding: 16px;
+  }
+  
+  .value-card {
+    padding: 16px;
+  }
+  
+  .value-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .value-number {
+    font-size: 1.2rem;
+  }
+  
+  .chart-wrapper {
+    height: 150px;
+  }
+  
+  .analysis-item {
+    font-size: 0.75rem;
+  }
+  
+  .analysis-label,
+  .analysis-value {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .value-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .analysis-item {
+    min-height: 55px;
+  }
+  
+  .analysis-label {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+  
+  .analysis-value {
+    font-size: 0.8rem;
+  }
+} 
